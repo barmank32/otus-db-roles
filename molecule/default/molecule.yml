@@ -2,12 +2,19 @@
 dependency:
   name: galaxy
 driver:
-  name: vagrant
-  provider:
-    name: virtualbox
+  name: docker
 platforms:
   - name: instance
-    box: ubuntu/xenial64
+    # image: ubuntu:xenial
+    image: barmank32/sys-ubuntu-py3:xenial 
+    command: ""
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: true
+    privileged: true
 provisioner:
   name: ansible
   lint:

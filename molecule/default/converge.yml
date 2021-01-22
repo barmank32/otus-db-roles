@@ -1,10 +1,10 @@
 ---
 - name: Converge
-  become: true
+  become: false
   hosts: all
   vars:
     mongo_bind_ip: 0.0.0.0
   tasks:
     - name: "Include db"
       include_role:
-        name: "db"
+        name: "otus-db-roles"
