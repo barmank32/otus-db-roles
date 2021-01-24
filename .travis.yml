@@ -1,20 +1,17 @@
----
 language: python
-python: "3.6"
-
+python: '3.6'
 services:
-  - docker
-
+- docker
 install:
-  - pip install ansible>=2.4 molecule>=2.6 pytest-testinfra molecule-docker
-
+- pip install ansible>=2.4 molecule>=2.6 pytest-testinfra molecule-docker
 script:
-  - molecule --version
-  - ansible --version
-  - molecule test
-
+- molecule --version
+- ansible --version
+- molecule test
 notifications:
   email: false
   slack:
-    rooms:
-      secure: kXi72/G3h1+Z84Zdj+m9JakhPdhM8kFvoIBofKfbkYie0oF7YgkMa2pl+nlxJ6u2cuV5QYW43nqvwzlhTb02/6reNNU4kPMYGxZt6UpJz5IwKHvlxPmy8WWNJ6nyLwbFCUYgOdhxuVv6sh1he59qRW0WGZ+C+EWRYz/U/haOYqxQMRdVA9SqlYYG80RswhFhzA3fD/1Lfpv9r144TW3/fNq0e4nzDppLR1w/VAyc4Uki7lC3s5iFBT4tO6xM/ZBZ/mqOiZnlS034fDHRoMz3Z4F+07p+huUyKMfEakYSRxzDZ9c1TDKAq4Q102+9stobR4kGkaYNcdH64gkCQyPPv6pmhCNcoUSYt6VE9qQXecDgB7SVXXW0WbNb6adsnRsoECZa8bt+mQWRfuw1oexe8co5gUqbVlcdx9Sfj8VOjLnxcR4iHOuCokpKA74dd5WI+35OcOsyCsAkEpIrHeCvjkuDWnKjZQLh3FSDcEVtlFx9hJKD2vU56uNnQ/4i3kXiXIBHJufLvcGepi8/8wcZ/LPrbKRAtDZHgHSYjDnPzb5dB7YjVbvPhxtTfoP7OXClJkNpIIzu+ANUFbREn13WJKwCEsHAu5RFaKZKaUUeVhyGyLhwLBknHTWlhWiR7u6bPmAiEVnYgLmlHZglKNV6BWA1IknRoo5zQXkCuPA0QAM=
+    secure: UreUkcWn+sJM7+Ryoff7ldAPKQRXNbZWKn0g2kCGb2BEZiH+HjWUioHuJRcEh7+Qvy1Ytx5WlS4XH8CGIn7nZ4/2onwsQFDamOTaDkQj/QqrzXg8uB6jpU2SXDR7DmsZ4ly4CtO9dBMtEcIw/xSQC6uEV7Lq9pKh/E+JSw/zxlBhra9DuwyfEv93OkCs0gEdW9ep94hjXwCaw4kGk8mt1xlwfiITDZwV1Q5xZSQXA7/HOqgli8BHI7Cngf0odZctrcrZ0SAioIwP92Fq5jIRTyqxJqcxU9oxjwZv7zwJRtXzJVw3eQXBF0MFNduUIOaK28JEHsyfxwd4uRWBw5KzzekUDZgVJbxBjCt/k36uT32FqVdfpB7lIac1BOS8MO5c+Dmgf62ZGW/yor47mi9O/Ql67gFD9UEakhHlwST0cTEKeKc2dDori1c5kNfiFljLIJxEdDVhCm08g5nKWRUFYpIWhtgGXXLjNgHjJKhnq6Jr/KqlOqxDnSOo9tyvAOE/oj2jMjRxNIP5gU4WU3KfN18g8cxYnWBlp9cB09ByILhDYV9C6A+/074QRwqeNqrzBDtuk+Lc4WAbD3p0LcLsWZ2TtiJOmi5Z0TzzDN0V7xxteXNIUEiLgkCsPeOYW3nF0aMoGe9JGJE++o2ZBYH3ZvDUx4u6jbrfNKlR0c7cBoU=
+    on_success: always
+    on_failure: always
+    
